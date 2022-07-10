@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+}
+
+h1{
+	color: white;
+	font-family: helvetica;
+	font-size: 40px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#busca{
+	color: white;
+}
+
+#cEnd{
+	font-size: 20px;
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header{
+	background-color: #49479d;
+	height: 100px;
+	padding: 10px;
+}
+
+#pesquisa{
+	text-align: right;
+}
+
+section{
+	padding-left: 320px;
+	padding-right: 320px;
+}
+
+p{
+	margin-top: 4px;
+	margin-bottom: 4px;
+}

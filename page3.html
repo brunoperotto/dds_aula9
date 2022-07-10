@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>Site 9</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0;
+		}
+
+		nav{
+			height: 700px;
+			width: 15%;
+			background-color: white;
+			float: left;
+		}
+
+		.logo{
+			width: 100%;
+		}
+
+		article{
+			height: 700px;
+			width: 60%;
+			background-color: #eeeeee;
+			float: left;
+		}
+
+		aside{
+			height: 700px;
+			width: 25%;
+			float: left;
+			background-color: white;
+		}
+
+		.link{
+			text-align: center;
+		}
+
+		a{
+			padding-right: 72px;
+			padding-left: 72px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+			background-color: #eeeeee;
+			color: #777777;
+			font-size: 20px;
+			font-weight: bolder;
+			font-family: calibri;
+			text-decoration: none;
+		}
+
+		a:hover{
+			color: white;
+			background-color: red;
+			transition: ease 1s;
+		}
+
+	</style>
+</head>
+<body>
+		<nav>
+			<img src="img/automotivo.png" class="logo">
+			<p class="link"><a href="page2.html">INICIO</a></p>
+		</nav>
+		<article>
+			<form method="post" id="fContato" action="mailto:b.perotto@gmail.com">
+					
+					<fieldset id="id_user">
+						<legend>Identificação do Usuário</legend>
+							<p><label for="cNome">Nome: &nbsp</label><input type="text" name="tNome" id="cNome" size="40" maxlength="40" minlength="10" placeholder="Nome Completo"></p> <!-- text é usado para textos em geral, maxlenght limite máximo de caracteres e minlenght limite mínimo, placeholder é o texto que começa preenchido. -->
+							<p><label for="cSenha">Senha:&nbsp </label><input type="password" name="tSenha" id="cSenha" size="40" maxlength="40" minlength="8" placeholder="Senha"></p> <!-- password oculta o texto digitado -->
+							<p><label for="cEmail">E-mail: </label><input type="email" name="tEmail" id="cEmail" size="40" maxlength="40" minlength="10" placeholder="exemplo@email.com"></p> <!-- type email exige @ e . no endereço de e-mail -->
+
+							<fieldset id="sex_user">
+								<legend>Sexo</legend> <!-- Mesmo name para desmarcar um quando marcar outro, checked true define qual começa marcado -->
+									<p><input type="radio" name="rSex" id="cMasc"><label for="cMasc"> Masculino</label></p> <!-- type radio marca bolinhas -->
+									<p><input type="radio" name="rSex" id="cFem"><label for="cFem"> Feminino</label></p>
+									<p><input type="radio" name="rSex" id="cOut" checked="true"><label for="cOut"> Outro</label></p>
+									
+									<p></br><label for="cdate">Data de Nascimento: </label><input type="date" name="tdate" id="cdate"></p> <!-- type date marca datas -->
+							</fieldset>
+					</fieldset>
+					
+					<fieldset id="end_user">
+						<legend>Endereço do Usuário</legend>
+							<p><label for="cLog">Logradouro: </label><input type="text" name="tLog" id="cLog" size="30" maxlength="25" minlength="5" placeholder="Localidade, Rua, Avenida, etc"></p>
+							<p><label for="cBai">Bairro: </label><input type="text" name="tBai" id="cBai" size="40" maxlength="40" minlength="5" placeholder="Bairro"></p>
+							<p><label for="cCom">Complemento: </label><input type="text" name="tCom" id="cCom" size="80" maxlength="80" minlength="5" placeholder="Complemento"></p>
+							<p><label for="cNum">Número: </label><input type="number" name="tNum" id="cNum" min="0" max="9999"></p>
+							<p><label for="cEst">Estado: </label><select name="tEst" id="cEst"> <!-- função select usada para selecionar uma entre um conjunto de opções -->
+								<optgroup label="Centro-Oeste">
+									<option>Distrito Federal</option>
+									<option selected="true">Goiás</option> <!-- selected true define qual começa marcado -->
+									<option>Mato Grosso</option>
+									<option>Mato Grosso do Sul</option>
+									<option>Minas Gerais</option>
+								</optgroup>
+								<optgroup label="Sul">
+									<option>Rio Grande do Sul</option>
+									<option>Santa Catarina</option> <!-- selected true define qual começa marcado -->
+									<option>Paraná</option>
+								</optgroup>
+							</select></p>
+							<p><label for="cCid">Cidade: </label><input type="text" name="tCid" id="cCid" placeholder="Nome da sua cidade" list="cidade">
+							</p>
+							<datalist id="cidade"> <!-- Permite adicionar sugestões de preenchimento, usado em conjunto com a função list="" no input e linkando com o id do datalist --> 
+								<option value="Goiânia"></option>
+								<option value="Morrinhos"></option>
+								<option value="Catalão"></option>
+								<option value="Caldas Novas"></option>
+							</datalist>
+					</fieldset>
+					
+					<fieldset id="msg_user">
+						<legend>Escreva sua Mensagem</legend>
+							<p><label for="cUrg">Urgência: </label><input type="range" name="rUrg" id="cUrg" min="0" max="10" step="1"></p> <!-- step permite definir de quanto em quanto a barra se movimenta no range -->
+							<p><label for="cMsg">Mensagem: </label></p>
+							<textarea name="tMsg" id="cMsg" cols="85" rows="10"></textarea>
+					</fieldset>
+
+					<fieldset id="check_box">
+						<legend>Dados Opcionais</legend>
+							<p><input type="checkbox" name="tSeg" id="cSeg" checked="true"><label for="cSeg"> Seguro de Viagem</label></p>
+							<p><input type="checkbox" name="tTerm" id="cTerm" checked="true"><label for="cTerm"> Aceito os Termos do Contrato</label></p>
+					</fieldset>
+
+					<fieldset id="color">
+						<legend>Cor</legend>
+							<p><label for="cCor">Cor: </label><input type="color" name="tCor" id="cCor"></p>
+					</fieldset>
+
+					<input type="submit" name="bEnd" id="cEnd" value="Finalizar">
+		</article>
+		<aside>
+			
+		</aside>		
+	</section>
+	<footer>
+		
+	</footer>
+</body>
+</html>
